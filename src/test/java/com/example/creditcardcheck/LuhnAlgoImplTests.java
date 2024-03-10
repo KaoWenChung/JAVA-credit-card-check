@@ -10,34 +10,28 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class LuhnAlgoImplTests {
 
     @Test
-    void testLuhnAlgo_ValidCardNumbers_ReturnsTrue() {
+    void testLuhnAlgo_ValidCardNumbers5545612808860939_true() {
         // given
         LuhnAlgoImpl luhnAlgoImpl = new LuhnAlgoImpl();
-        int[] validCardNumbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 0};
+        long validCardNumbers = 5545612808860939L;
 
         // when
         boolean result = luhnAlgoImpl.check(validCardNumbers);
 
         // then
         assertTrue(result);
-//        assertFalse(result);
-    }
-}
-
-/*
-@Test
-    public void testLuhnAlgo_ValidCardNumbers_ReturnsTrue() {
-        LuhnAlgoImpl luhnAlgoImpl = new LuhnAlgoImpl();
-        int[] validCardNumbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 0}; // Replace with valid card numbers
-        boolean result = luhnAlgoImpl.luhnAlgo(validCardNumbers);
-        assertTrue(result);
     }
 
     @Test
-    public void testLuhnAlgo_InvalidCardNumbers_ReturnsFalse() {
+    void testLuhnAlgo_ValidCardNumbers5545612808860949_false() {
+        // given
         LuhnAlgoImpl luhnAlgoImpl = new LuhnAlgoImpl();
-        int[] invalidCardNumbers = {9, 8, 7, 6, 5, 4, 3, 2, 1, 0}; // Replace with invalid card numbers
-        boolean result = luhnAlgoImpl.luhnAlgo(invalidCardNumbers);
+        long validCardNumbers = 5545612808860949L;
+
+        // when
+        boolean result = luhnAlgoImpl.check(validCardNumbers);
+
+        // then
         assertFalse(result);
     }
- */
+}
